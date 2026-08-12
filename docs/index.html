@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Network Printer Inspector — Viewer</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Network Printer Inspector — Viewer</h1>
+    <p class="subtitle">Upload your scan JSON or CSV (from the CLI) to inspect devices and printers.</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <label class="file">
+        <span>Upload JSON/CSV</span>
+        <input id="fileInput" type="file" accept=".json,.csv,application/json,text/csv" />
+      </label>
+      <label class="toggle">
+        <input id="printersOnly" type="checkbox" /> Show printers only
+      </label>
+      <label class="search">
+        <input id="search" type="search" placeholder="Search IP, hostname, model, serial..." />
+      </label>
+      <div class="actions">
+        <button id="exportCsv" disabled>Export filtered CSV</button>
+        <button id="exportJson" disabled>Export filtered JSON</button>
+        <button id="clear" disabled>Clear</button>
+      </div>
+    </section>
+
+    <section id="summary" class="summary" aria-live="polite"></section>
+
+    <section id="tableWrap" class="table-wrap">
+      <table id="devicesTable" class="devices" aria-describedby="summary">
+        <thead>
+          <tr>
+            <th>IP</th>
+            <th>Hostname</th>
+            <th>Model</th>
+            <th>Serial</th>
+            <th>Type</th>
+            <th>SNMP</th>
+            <th>IPP</th>
+            <th>HTTP</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="help" class="help">
+      <h2>How to use</h2>
+      <ol>
+        <li>Run the CLI locally and save results (JSON or CSV): e.g. <code>python -m net_printer_inspector scan --output ergebnisse.json</code></li>
+        <li>Upload the resulting JSON or CSV file here.</li>
+        <li>Use search and filters to explore, export filtered results if needed.</li>
+      </ol>
+      <p class="note">This viewer does not send any data anywhere — everything runs in your browser.</p>
+    </section>
+  </main>
+
+  <footer>
+    <small>Network Printer Inspector — Static viewer • Host on GitHub Pages</small>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
