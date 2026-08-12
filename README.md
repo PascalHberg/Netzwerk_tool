@@ -1,6 +1,6 @@
 # Netzwerk_tool — Network Printer Inspector
 
-Kurz: Netzwerk_tool scannt ein lokales Subnetz, erkennt Drucker und liest verfügbare Metadaten über SNMP, IPP, mDNS und HTTP aus. Zielgruppe sind Netzwerk‑Administratoren oder Techniker, die schnell eine Inventur von Druckern im Netz erstellen möchten.
+Netzwerk_tool scannt ein lokales Subnetz, erkennt Drucker und liest verfügbare Metadaten über SNMP, IPP, mDNS und HTTP aus. Zielgruppe sind Netzwerk‑Administratoren oder Techniker, die schnell eine Inventur von Druckern im Netz erstellen möchten.
 
 ## Features
 - Schneller paralleler Netzwerkscan im Subnetz
@@ -10,7 +10,7 @@ Kurz: Netzwerk_tool scannt ein lokales Subnetz, erkennt Drucker und liest verfü
 - Schöne Konsolen‑Ausgabe (Rich)
 - Statische Web‑Viewer (GitHub Pages) zum einfachen Betrachten von Scan‑Ergebnissen
 
-## Schnell: Was der Benutzer tun muss (kein Python notwendig)
+## Was zu tun ist (kein Python notwendig)
 1. Öffne die Projekt‑Seite (GitHub Pages), z. B.:
    `https://PascalHberg.github.io/Netzwerk_tool/`
 2. Auf der Seite: "Upload JSON/CSV" → wähle eine zuvor erzeugte Scan‑Datei (oder eine Beispiel‑Datei).
